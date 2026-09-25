@@ -1,6 +1,5 @@
 #include <iostream>
 
-
 bool getBit(unsigned int x, int n) {
   if (x & (1u << n)) {
     return true;
@@ -30,6 +29,19 @@ int countOnes(unsigned int x) {
   return count;
 }
 
+bool isPowerOfTwo(unsigned int x) {
+  int count = 0;
+  for (int n = 0; n <= 31; n++) {
+    if (x & (1u << n)) {
+      count++;
+    }
+  }
+  if (count == 1) {
+    return true;
+  }
+  return false;
+}
+
 int main() {
   std::cout << std::boolalpha;
   std::cout << "getBit(5, 0): " << getBit(5, 0) << std::endl;
@@ -37,5 +49,7 @@ int main() {
   std::cout << "clearBit(15, 0): " << clearBit(15, 0) << std::endl;
   std::cout << "toggleBit(10, 1): " << toggleBit(10, 1) << std::endl;
   std::cout << "countOnes(255): " << countOnes(255) << std::endl;
+  std::cout << "isPowerOfTwo(64): " << isPowerOfTwo(64) << std::endl;
+  std::cout << "isPowerOfTwo(66): " << isPowerOfTwo(66) << std::endl;
   return 0;
 }
