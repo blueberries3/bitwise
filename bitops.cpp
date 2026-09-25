@@ -1,5 +1,6 @@
 #include <iostream>
 
+
 bool getBit(unsigned int x, int n) {
   if (x & (1u << n)) {
     return true;
@@ -20,13 +21,9 @@ unsigned int toggleBit(unsigned int x, int n) {
 }
 
 int countOnes(unsigned int x) {
-  std::vector<int> k;
-  for (size_t i = x; x >= 0; i = x) {
-    k.push_back(x % 2);
-  }
   int count = 0;
-  for (size_t i = 0; x < k.size(); i++) {
-    if (k[i] == 1) {
+  for (int n = 0; n <= 31; n++) {
+    if (x & (1u << n)) {
       count++;
     }
   }
