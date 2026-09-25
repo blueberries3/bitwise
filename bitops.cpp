@@ -51,5 +51,6 @@ int main() {
   std::cout << "countOnes(255): " << countOnes(255) << std::endl;
   std::cout << "isPowerOfTwo(64): " << isPowerOfTwo(64) << std::endl;
   std::cout << "isPowerOfTwo(66): " << isPowerOfTwo(66) << std::endl;
+  std::cout << "isPowerOfTwo(0): " << isPowerOfTwo(0) << std::endl;
   return 0;
 }
