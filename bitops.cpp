@@ -1,5 +1,3 @@
-#include <iostream>
-
 bool getBit(unsigned int x, int n) {
   if (x & (1u << n)) {
     return true;
@@ -40,17 +38,4 @@ bool isPowerOfTwo(unsigned int x) {
     return true;
   }
   return false;
-}
-
-int main() {
-  std::cout << std::boolalpha;
-  std::cout << "getBit(5, 0): " << getBit(5, 0) << std::endl;
-  std::cout << "setBit(0, 3): " << setBit(0, 3) << std::endl;
-  std::cout << "clearBit(15, 0): " << clearBit(15, 0) << std::endl;
-  std::cout << "toggleBit(10, 1): " << toggleBit(10, 1) << std::endl;
-  std::cout << "countOnes(255): " << countOnes(255) << std::endl;
-  std::cout << "isPowerOfTwo(64): " << isPowerOfTwo(64) << std::endl;
-  std::cout << "isPowerOfTwo(66): " << isPowerOfTwo(66) << std::endl;
-  std::cout << "isPowerOfTwo(0): " << isPowerOfTwo(0) << std::endl;
-  return 0;
 }
