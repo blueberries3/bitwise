@@ -1,4 +1,4 @@
-#include <iostream>;
+#include <iostream>
 
 bool getBit(unsigned int x, int n) {
   if (x & (1u << n)) {
