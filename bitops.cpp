@@ -13,7 +13,7 @@ unsigned int setBit(unsigned int x, int n) {
 
 int main() {
   std::cout << std::boolalpha;
-  std::cout << getBit(5, 0) << std::endl;
-  std::cout << setBit(0, 3) << std::endl;
+  std::cout << "getBit(5, 0)" << getBit(5, 0) << std::endl;
+  std::cout << "setBit(0, 3)" << setBit(0, 3) << std::endl;
   return 0;
 }
