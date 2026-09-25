@@ -15,10 +15,15 @@ unsigned int clearBit(unsigned int x, int n) {
   return x & ~(1u << n);
 }
 
+unsigned int toggleBit(unsigned int x, int n) {
+  return x ^ (1u << n);
+}
+
 int main() {
   std::cout << std::boolalpha;
   std::cout << "getBit(5, 0): " << getBit(5, 0) << std::endl;
   std::cout << "setBit(0, 3): " << setBit(0, 3) << std::endl;
   std::cout << "clearBit(15, 0): " << clearBit(15, 0) << std::endl;
+  std::cout << "toggleBit(10, 1): " << toggleBit(10, 1) << std::endl;
   return 0;
 }
