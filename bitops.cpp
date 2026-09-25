@@ -8,6 +8,7 @@ bool getBit(unsigned int x, int n) {
 }
 
 int main() {
+  std::cout << std::boolalpha;
   std::cout << getBit(5, 0) << std::endl;
   return 0;
 }
